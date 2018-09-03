@@ -4,7 +4,7 @@ if [[ -z "${UUID}" ]]; then
 fi
 
 if [[ -z "${AlterID}" ]]; then
-  AlterID="10"
+  AlterID="64"
 fi
 
 if [[ -z "${V2_Path}" ]]; then
@@ -12,7 +12,7 @@ if [[ -z "${V2_Path}" ]]; then
 fi
 
 if [[ -z "${V2_QR_Path}" ]]; then
-  V2_QR_Code="1234"
+  V2_QR_Code="dingyue"
 fi
 
 rm -rf /etc/localtime
@@ -47,9 +47,7 @@ cd /root
 mkdir /wwwroot
 cd /wwwroot
 
-wget --no-check-certificate -qO 'demo.tar.gz' "https://github.com/ki8852/v2ray-heroku-undone/raw/master/demo.tar.gz"
-tar xvf demo.tar.gz
-rm -rf demo.tar.gz
+wget --no-check-certificate -qO 'index.php' "https://github.com/zzzshanghai/v2ray-heroku-undone/raw/master/index.php"
 
 cat <<-EOF > /v2raybin/v2ray-$V_VER-linux-$SYS_Bit/config.json
 {
