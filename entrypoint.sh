@@ -1,6 +1,6 @@
 #! /bin/bash
 if [[ -z "${UUID}" ]]; then
-  UUID="4890bd47-5180-4b1c-9a5d-3ef686543112"
+  UUID="a87a9dd0-0a3c-4e14-b2ca-d23e905516d4"
 fi
 
 if [[ -z "${AlterID}" ]]; then
@@ -86,7 +86,7 @@ cat <<-EOF > /caddybin/Caddyfile
 http://0.0.0.0:${PORT}
 {
 	root /wwwroot
-	index index.html
+	index index.php
 	timeouts none
 	proxy ${V2_Path} localhost:2333 {
 		websocket
